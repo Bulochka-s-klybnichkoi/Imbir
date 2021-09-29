@@ -351,24 +351,21 @@ h6:hover::after {
 
 /* Section 3 */
 
-.nyaarigato {
+.main-section3-slider {
   overflow: hidden;
   max-width: 1000px;
   position: relative;
 }
 
-.prostinya {
+.main-section3-slider-canvas {
   display: flex;
-}
-
-.carousel {
 }
 
 #left {
   transform: rotate(180deg);
 }
 
-.arrows {
+.main-section3-arrows {
   position: absolute;
   top: 0px;
   margin-top: calc(281px - 60px / 2);
@@ -376,19 +373,19 @@ h6:hover::after {
   margin-left: 10px;
 }
 
-.arrow-left,
-.arrow-right {
+.main-section3-arrows-left,
+.main-section3-arrows-right {
   width: 60px;
   height: 60px;
   /* transform: translateY(calc(-281px + 60px / 2)); */
 }
 
-.arrow-right {
+.main-section3-arrows-right {
   margin-left: 860px;
   margin-right: 10px;
 }
 
-.balls {
+.main-section3-slider-balls {
   list-style: none;
   display: flex;
   position: absolute;
@@ -399,7 +396,7 @@ h6:hover::after {
   left: calc(50% - (70px / 2));
 }
 
-.ball {
+.main-section3-slider-balls-item {
   content: "";
   background-color: #fffbdb;
   border-radius: 50%;
@@ -409,7 +406,7 @@ h6:hover::after {
   transition: background-color 500ms ease;
 }
 
-.ball:not(:last-child) {
+.main-section3-slider-balls-item:not(:last-child) {
   margin-right: 5px;
 }
 
