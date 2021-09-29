@@ -351,57 +351,69 @@ h6:hover::after {
 
 /* Section 3 */
 
-.main-section3 {
-  padding-top: 32px;
-  padding-bottom: 42px;
-  /* background-image: url(../img/section3/background.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 251, 219, 0.6);
-  background-blend-mode: lighten; */
+.nyaarigato {
+  overflow: hidden;
+  max-width: 1000px;
   position: relative;
-  background-size: 1820px;
 }
 
-.main-section3-slider-img {
-  width: 100%;
+.prostinya {
+  display: flex;
 }
 
-.main-section3-slider-arrows-left {
+.carousel {
+}
+
+#left {
   transform: rotate(180deg);
-  left: 40px;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 
-.main-section3-slider-arrows-right {
-  right: 40px;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
-}
-
-.main-section3-slider-arrows-left,
-.main-section3-slider-arrows-right {
+.arrows {
   position: absolute;
-  width: 50px;
-  top: 500px;
+  top: 0px;
+  margin-top: calc(281px - 60px / 2);
+  z-index: 99;
+  margin-left: 10px;
 }
 
-/* Footer */
-
-.footer {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: url(../img/footer/background.png);
-  background-blend-mode: multiply;
+.arrow-left,
+.arrow-right {
+  width: 60px;
+  height: 60px;
+  /* transform: translateY(calc(-281px + 60px / 2)); */
 }
 
-.footer-container {
-  padding-top: 150px;
+.arrow-right {
+  margin-left: 860px;
+  margin-right: 10px;
 }
 
-.footer-title-icon {
-  width: 40px;
-  height: 40px;
+.balls {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  bottom: 10px;
+  left: calc(50% - (70px / 2));
 }
 
-.footer-links-item-link {
-  color: white;
+.ball {
+  content: "";
+  background-color: #fffbdb;
+  border-radius: 50%;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+  width: 20px;
+  height: 20px;
+  transition: background-color 500ms ease;
+}
+
+.ball:not(:last-child) {
+  margin-right: 5px;
+}
+
+.active-ball {
+  background-color: #b99162;
+  transition: background-color 500ms ease;
 }

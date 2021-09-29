@@ -4,6 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/normalize.css">
    <link rel="stylesheet" href="assets/css/reset.css">
    <link rel="stylesheet" href="assets/css/style.css">
@@ -76,13 +80,22 @@
    </section>
    <section class="main-section3">
       <div class="main-section3-slider">
-         <img src="assets/img/section3/slider0.jpg" alt="" class="main-section3-slider-img">
-         <!-- <img src="assets/img/section3/slider1.jpg" alt="" class="main-section3-slider-img"> -->
+         <div class="main-section3-slider-canvas">
+            <img class="main-section3-slider-canvas-img" src="assets/img/section3/slider0.jpg" alt="">
+            <img src="assets/img/section3/slider1.jpg" alt="" class="main-section3-slider-canvas-img">
+            <img src="assets/img/section3/slider2.jpg" alt="" class="main-section3-slider-canvas-img">
+         </div>
+         <ul class="main-section3-slider-balls">
+            <li class="main-section3-slider-balls-item"></li>
+            <li class="main-section3-slider-balls-item"></li>
+            <li class="main-section3-slider-balls-item"></li>
+         </ul>
       </div>
-      <div class="main-section3-slider-arrows">
-         <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-slider-arrows-left">
-         <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-slider-arrows-right">
+      <div class="main-section3-arrows">
+         <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-arrows-left" id="left">
+         <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-arrows-right">
       </div>
+      <script src="assets/js/slider.js"></script>
    </section>
    <footer class="footer">
       <div class="container footer-container">
