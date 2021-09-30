@@ -52,7 +52,7 @@ function previous() {
    updateBalls()
 }
 
-// balls
+// Balls
 
 var ball1 = document.getElementsByClassName("main-section3-slider-balls-item")[0];
 var ball2 = document.getElementsByClassName("main-section3-slider-balls-item")[1];
@@ -81,3 +81,15 @@ function passiveBalls() {
  
 ball1.classList.add("active-ball");
 var activeball = 1;
+
+// Header
+
+var header = document.querySelector(".main-section3-slider-header");
+
+function updateHeader() {
+   if (piclength == 0) {
+      header.textContent = "Банановые сырники";
+   }
+}
+
+updateHeader()

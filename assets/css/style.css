@@ -386,6 +386,21 @@ h6:hover::after {
   position: relative;
   border: 1px solid #b99162;
   box-shadow: 0px 0px 30px 0px #b99162;
+  overflow: hidden;
+}
+
+.main-section3-slider:hover .main-section3-header {
+  transition: transform 500ms ease;
+  transform: translateY(-50px);
+}
+
+.main-section3-header {
+  background-color: #00000055;
+  color: #fffbdb;
+  position: absolute;
+  width: 1000px;
+  transform: translateY(0px);
+  transition: transform 500ms ease;
 }
 
 .main-section3-slider-canvas {
