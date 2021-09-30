@@ -1,5 +1,5 @@
-var arrowL = document.getElementsByClassName("main-section3-arrows-left")[0];
-var arrowR = document.getElementsByClassName("main-section3-arrows-right")[0];
+var arrowL = document.getElementsByClassName("main-section3-slider-arrows-left")[0];
+var arrowR = document.getElementsByClassName("main-section3-slider-arrows-right")[0];
 
 var maxpiclength = 2000;
 var picwidth = 1000;
@@ -7,8 +7,8 @@ var piclength = 0;
 var canvas = document.getElementsByClassName("main-section3-slider-canvas")[0];
 
 
-arrowL.addEventListener("click", previous);
-arrowR.addEventListener("click", next);
+arrowR.addEventListener("click", previous);
+arrowL.addEventListener("click", next);
 
 function next() {
    if (piclength === -maxpiclength) {
@@ -54,10 +54,9 @@ function previous() {
 
 // balls
 
-var ball1 = document.getElementsByClassName("main-section3-slider-canvas-img")[0];
-var ball2 = document.getElementsByClassName("main-section3-slider-canvas-img")[1];
-var ball3 = document.getElementsByClassName("main-section3-slider-canvas-img")[2];
-var allBalls = document.getElementsByClassName("main-section3-slider-canvas-img");
+var ball1 = document.getElementsByClassName("main-section3-slider-balls-item")[0];
+var ball2 = document.getElementsByClassName("main-section3-slider-balls-item")[1];
+var ball3 = document.getElementsByClassName("main-section3-slider-balls-item")[2];
 
 function updateBalls() {
    if (activeball == 1) {

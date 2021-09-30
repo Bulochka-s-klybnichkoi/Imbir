@@ -41,6 +41,7 @@
       </nav>
       <img src="assets/img/header/search.svg" alt="Search" class="header-search">
       <input type="text" placeholder="Ищем..." class="header-field">
+      <script src="assets/js/search.js"></script>
    </header>
 
    <section class="main-section1">
@@ -79,21 +80,23 @@
       </div>
    </section>
    <section class="main-section3">
-      <div class="main-section3-slider">
-         <div class="main-section3-slider-canvas">
-            <img class="main-section3-slider-canvas-img" src="assets/img/section3/slider0.jpg" alt="">
-            <img src="assets/img/section3/slider1.jpg" alt="" class="main-section3-slider-canvas-img">
-            <img src="assets/img/section3/slider2.jpg" alt="" class="main-section3-slider-canvas-img">
+      <div class="container">
+         <div class="main-section3-slider">
+               <div class="main-section3-slider-canvas">
+                  <img class="main-section3-slider-canvas-img" src="assets/img/section3/slider0.jpg" alt="">
+                  <img src="assets/img/section3/slider1.jpg" alt="" class="main-section3-slider-canvas-img">
+                  <img src="assets/img/section3/slider2.jpg" alt="" class="main-section3-slider-canvas-img">
+               </div>
+               <ul class="main-section3-slider-balls">
+                  <li class="main-section3-slider-balls-item"></li>
+                  <li class="main-section3-slider-balls-item"></li>
+                  <li class="main-section3-slider-balls-item"></li>
+               </ul>
+            <div class="main-section3-slider-arrows">
+               <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-slider-arrows-left" id="left">
+               <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-slider-arrows-right">
+            </div>
          </div>
-         <ul class="main-section3-slider-balls">
-            <li class="main-section3-slider-balls-item"></li>
-            <li class="main-section3-slider-balls-item"></li>
-            <li class="main-section3-slider-balls-item"></li>
-         </ul>
-      </div>
-      <div class="main-section3-arrows">
-         <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-arrows-left" id="left">
-         <img src="assets/img/section3/right-arrow.svg" alt="Arrow" class="main-section3-arrows-right">
       </div>
       <script src="assets/js/slider.js"></script>
    </section>
@@ -121,6 +124,7 @@
          </ul>
       </div>
    </footer>
-   <script src="assets/js/script.js"></script>
+   <script src="assets/js/slider.js"></script>
+   <script src="assets/js/search.js"></script>
 </body>
 </html>
