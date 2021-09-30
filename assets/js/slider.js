@@ -7,8 +7,8 @@ var piclength = 0;
 var canvas = document.getElementsByClassName("main-section3-slider-canvas")[0];
 
 
-arrowR.addEventListener("click", previous);
-arrowL.addEventListener("click", next);
+arrowL.addEventListener("click", previous);
+arrowR.addEventListener("click", next);
 
 function next() {
    if (piclength === -maxpiclength) {

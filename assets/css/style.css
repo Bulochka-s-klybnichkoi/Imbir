@@ -461,3 +461,58 @@ h6:hover::after {
   background-color: #b99162;
   transition: background-color 500ms ease;
 }
+
+/* Footer */
+
+.footer {
+  background-color: #00000093;
+  background-image: url(../img/footer/background.png);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer-title {
+  display: flex;
+  position: relative;
+  align-items: center;
+  font-size: 10px;
+}
+
+.footer-title::after {
+  content: "";
+  background-color: #725b40;
+  height: 1.7px;
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  opacity: 0;
+  transition: width 500ms, opacity 500ms ease-out;
+  width: 0;
+}
+
+.footer-title:hover::after {
+  opacity: 1;
+  width: 100%;
+  transition: width 500ms ease-in;
+}
+
+.footer-title-header {
+  color: white;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer-title-header::after {
+  display: none;
+}
+
+.footer-title-icon {
+  width: 37px;
+  height: 37px;
+  margin-right: 10px;
+}
+
+.footer-links-item-link {
+  color: white;
+}
