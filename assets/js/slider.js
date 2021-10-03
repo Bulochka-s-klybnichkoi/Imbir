@@ -2,9 +2,10 @@ var arrowL = document.getElementsByClassName("main-section3-slider-arrows-left")
 var arrowR = document.getElementsByClassName("main-section3-slider-arrows-right")[0];
 
 var maxpiclength = 2000;
-var picwidth = 1000;
+var picwidth = `1000 / 1920 * 100vw`;
 var piclength = 0;
 var canvas = document.getElementsByClassName("main-section3-slider-canvas")[0];
+var img = document.getElementsByClassName("main-section3-slider-canvas-img")[0];
 
 
 arrowL.addEventListener("click", previous);
@@ -29,6 +30,7 @@ function next() {
       activeball = 1;
    }
    updateBalls()
+   updateHeader()
 }
 
 function previous() {
@@ -50,6 +52,7 @@ function previous() {
       activeball = 3;
    }
    updateBalls()
+   updateHeader()
 }
 
 // Balls
@@ -84,12 +87,27 @@ var activeball = 1;
 
 // Header
 
-var header = document.querySelector(".main-section3-slider-header");
+var header = document.querySelector(".main-section3-header");
+var slider = document.querySelector(".main-section3-slider")
 
 function updateHeader() {
    if (piclength == 0) {
       header.textContent = "Банановые сырники";
    }
+   if (piclength == 1000) {
+      header.textContent = "Манная каша";
+   }
 }
 
 updateHeader()
+
+slider.addEventListener("mouseenter", headerOpen)
+slider.addEventListener("mouseleave", headerClose)
+
+function headerOpen() {
+   header.classList.add("main-section3-header-hover")
+}
+
+function headerClose() {
+   header.classList.remove("main-section3-header-hover")
+}

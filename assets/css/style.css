@@ -28,8 +28,8 @@ body {
 }
 
 .header-logo {
-  width: 100px;
-  height: 100px;
+  width: calc(100 / 1920 * 100vw);
+  height: calc(100 / 1920 * 100vw);
   padding: 5px;
 }
 
@@ -62,7 +62,7 @@ body {
 
 .header-nav-pages-item-link {
   font-family: Jura;
-  font-size: 20px;
+  font-size: calc(20 / 1920 * 140vw);
   font-style: normal;
   font-weight: 400;
   line-height: 29px;
@@ -105,14 +105,14 @@ body {
 
 .header-nav-home,
 .header-search {
-  width: 34px;
-  height: 34px;
+  width: calc(34 / 1920 * 100vw);
+  height: calc(34 / 1920 * 100vw);
   cursor: pointer;
 }
 
 .header-field {
   position: absolute;
-  font-size: 22px;
+  font-size: calc(22 / 1920 * 140vw);
   background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -127,6 +127,13 @@ body {
   font-weight: normal;
   opacity: 0;
   cursor: default;
+  transition: opacity 250ms ease;
+}
+
+.header-field-active {
+  transition: opacity 250ms ease;
+  opacity: 1;
+  cursor: text;
 }
 
 /* Main */
@@ -138,7 +145,7 @@ h4,
 h5,
 h6 {
   font-family: Jura;
-  font-size: 41px;
+  font-size: calc(41 / 1920 * 140vw);
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
@@ -178,7 +185,7 @@ h4:hover::after,
 h5:hover::after,
 h6:hover::after {
   opacity: 1;
-  width: 690px;
+  width: calc(690 / 1920 * 100vw);
   transition: width 500ms ease-in;
 }
 
@@ -198,7 +205,7 @@ h6:hover::after {
   background-color: rgba(255, 251, 219, 0.6);
   background-blend-mode: lighten;
   background-position: center;
-  background-size: 1820px;
+  background-size: calc(1820 / 1920 * 150vw);
   background-repeat: no-repeat;
   position: relative;
 }
@@ -214,7 +221,7 @@ h6:hover::after {
 }
 
 .main-section1-header {
-  max-width: 687px;
+  max-width: calc(800 / 1920 * 100vw);
   margin-bottom: 30px;
 }
 
@@ -240,6 +247,7 @@ h6:hover::after {
   width: 554px;
   margin-left: auto;
   margin-right: auto;
+  width: calc(554 / 1920 * 100vw);
 }
 
 .main-section1-img-wrapper-text {
@@ -251,7 +259,7 @@ h6:hover::after {
   transition: transform 350ms linear;
   bottom: 0;
   font-family: Jura;
-  font-size: 24px;
+  font-size: calc(24 / 1920 * 140vw);
   font-style: normal;
   font-weight: 400;
   line-height: 29px;
@@ -259,6 +267,7 @@ h6:hover::after {
   text-align: center;
   padding-top: 19px;
   padding-bottom: 19px;
+  width: calc(554 / 1920 * 100vw);
 }
 
 .main-section1-description {
@@ -270,7 +279,7 @@ h6:hover::after {
 
 .main-section1-description-item {
   font-family: Neucha;
-  font-size: 27px;
+  font-size: calc(27 / 1920 * 140vw);
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
@@ -278,11 +287,13 @@ h6:hover::after {
   list-style: disc;
   cursor: default;
   transition: font-size 300ms linear;
+  text-align: center;
+  margin: 0;
 }
 
 .main-section1-description-item:hover {
   color: #725b40;
-  font-size: 30px;
+  font-size: calc(27 / 1920 * 160vw);
   transition: font-size 700ms, color 500ms linear;
 }
 
@@ -333,7 +344,7 @@ h6:hover::after {
 
 .main-section2-buttons-item-button {
   font-family: Jura;
-  font-size: 24px;
+  font-size: calc(24 / 1920 * 140vw);
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
@@ -353,7 +364,7 @@ h6:hover::after {
   color: #693505;
   transition: color 250ms, padding 250ms, font-size 250ms linear;
   padding: 10px 20px 10px 20px;
-  font-size: 30px;
+  font-size: calc(30 / 1920 * 160vw);
 }
 
 /* Section 3 */
@@ -381,30 +392,42 @@ h6:hover::after {
 }
 
 .main-section3-slider {
-  overflow: hidden;
-  max-width: 999px;
+  max-width: calc(1000 / 1920 * 100vw);
   position: relative;
   border: 1px solid #b99162;
   box-shadow: 0px 0px 30px 0px #b99162;
   overflow: hidden;
 }
 
-.main-section3-slider:hover .main-section3-header {
-  transition: transform 500ms ease;
-  transform: translateY(-50px);
+.wrapper {
+  width: calc(1000 / 1920 * 100vw);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-section3-header {
   background-color: #00000055;
   color: #fffbdb;
   position: absolute;
-  width: 1000px;
+  width: calc(999 / 1920 * 100vw);
   transform: translateY(0px);
   transition: transform 500ms ease;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+}
+
+.main-section3-header-hover {
+  transition: transform 500ms ease;
+  transform: translateY(-50px);
 }
 
 .main-section3-slider-canvas {
   display: flex;
+  max-width: calc(1000 / 1920 * 100vw);
+}
+.main-section3-slider-canvas-img {
+  max-width: calc(1000 / 1920 * 100vw);
 }
 
 #left {
@@ -414,22 +437,22 @@ h6:hover::after {
 .main-section3-slider-arrows {
   position: absolute;
   top: 0px;
-  margin-top: calc(281px - 60px / 2);
+  margin-top: calc((281 - 60 / 2) / 1920 * 100vw);
   z-index: 99;
-  margin-left: 10px;
+  margin-left: calc(10 / 1920 * 100vw);
   display: flex;
 }
 
 .main-section3-slider-arrows-left,
 .main-section3-slider-arrows-right {
-  width: 60px;
-  height: 60px;
+  width: calc(60 / 1920 * 100vw);
+  height: calc(60 / 1920 * 100vw);
   /* transform: translateY(calc(-281px + 60px / 2)); */
 }
 
 .main-section3-slider-arrows-right {
-  margin-left: 860px;
-  margin-right: 10px;
+  margin-left: calc(860 / 1920 * 100vw);
+  margin-right: calc(10 / 1920 * 100vw);
 }
 
 .main-section3-slider-balls {
@@ -448,13 +471,13 @@ h6:hover::after {
   background-color: #fffbdb;
   border-radius: 50%;
   box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
-  width: 20px;
-  height: 20px;
+  width: calc(20 / 1920 * 100vw);
+  height: calc(20 / 1920 * 100vw);
   transition: background-color 500ms ease;
 }
 
 .main-section3-slider-balls-item:not(:last-child) {
-  margin-right: 5px;
+  margin-right: calc(5 / 1920 * 100vw);
 }
 
 .active-ball {
@@ -476,7 +499,6 @@ h6:hover::after {
   display: flex;
   position: relative;
   align-items: center;
-  font-size: 10px;
 }
 
 .footer-title::after {
@@ -501,6 +523,7 @@ h6:hover::after {
   color: white;
   margin-left: 0;
   margin-right: 0;
+  font-size: calc(41 / 1920 * 140vw);
 }
 
 .footer-title-header::after {
@@ -513,6 +536,11 @@ h6:hover::after {
   margin-right: 10px;
 }
 
+.footer-links {
+  margin-top: 10px;
+}
+
 .footer-links-item-link {
   color: white;
+  font-family: Neucha;
 }

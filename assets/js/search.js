@@ -3,19 +3,12 @@ var input = document.getElementsByClassName("header-field")[0];
 var fieldOpened = false;
 
 function searchButton() {
-   input.style.transition = "opacity 250ms ease"
-   input.style.opacity = 1;
-   input.style.cursor = "text";
-   button.removeEventListener("click", searchButton)
-   button.addEventListener("click", searchButtonClose);
+   if (input.classList.contains("header-field-active")) {
+      input.classList.remove("header-field-active")
+   }
+   else {
+      input.classList.add("header-field-active")
+   }
 }
 
-function searchButtonClose() {
-   input.style.transition = "opacity 250ms ease"
-   input.style.opacity = 0;
-   input.style.cursor = "default";
-   button.removeEventListener("click", searchButtonClose)
-   button.AddEventListener("click", searchButton)
-   
-}
 button.addEventListener("click", searchButton);
