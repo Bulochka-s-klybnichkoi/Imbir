@@ -493,12 +493,15 @@ h6:hover::after {
   background-blend-mode: darken;
   background-position: center;
   background-size: cover;
+  padding-top: calc(10 / 1920 * 100vw);
+  padding-bottom: calc(50 / 1920 * 100vw);
 }
 
 .footer-title {
   display: flex;
   position: relative;
   align-items: center;
+  margin-bottom: calc(20 / 1920 * 100vw);
 }
 
 .footer-title::after {
@@ -507,7 +510,7 @@ h6:hover::after {
   height: 1.7px;
   display: block;
   position: absolute;
-  bottom: -8px;
+  bottom: calc(-10 / 1920 * 100vw);
   opacity: 0;
   transition: width 500ms, opacity 500ms ease-out;
   width: 0;
@@ -531,16 +534,41 @@ h6:hover::after {
 }
 
 .footer-title-icon {
-  width: 37px;
-  height: 37px;
-  margin-right: 10px;
+  width: calc(55 / 1920 * 100vw);
+  height: calc(55 / 1920 * 100vw);
+  margin-right: calc(10 / 1920 * 100vw);
 }
 
 .footer-links {
-  margin-top: 10px;
+  display: flex;
+}
+
+.row1 {
+  margin-right: calc(50 / 1920 * 100vw);
+}
+
+.footer-links-item:not(:last-child) {
+  margin-bottom: calc(10 / 1920 * 140vw);
 }
 
 .footer-links-item-link {
   color: white;
   font-family: Neucha;
+  font-size: calc(20 / 1920 * 140vw);
+}
+
+.footer-links-item-link:hover {
+  color: #b99162;
+  transition: color 250ms ease;
+}
+
+.phone {
+  display: flex;
+}
+
+.comma {
+  color: white;
+  margin: 0;
+  margin-right: calc(8 / 1920 * 100vw);
+  cursor: default;
 }

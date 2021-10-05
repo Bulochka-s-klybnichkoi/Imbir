@@ -2,7 +2,7 @@ var arrowL = document.getElementsByClassName("main-section3-slider-arrows-left")
 var arrowR = document.getElementsByClassName("main-section3-slider-arrows-right")[0];
 
 var maxpiclength = 2000;
-var picwidth = `1000 / 1920 * 100vw`;
+var picwidth = calc(1000 / 1920 * 100vw);
 var piclength = 0;
 var canvas = document.getElementsByClassName("main-section3-slider-canvas")[0];
 var img = document.getElementsByClassName("main-section3-slider-canvas-img")[0];
