@@ -410,11 +410,18 @@ h6:hover::after {
   color: #fffbdb;
   position: absolute;
   width: calc(999 / 1920 * 100vw);
-  transform: translateY(0px);
   transition: transform 500ms ease;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   text-align: center;
+  padding-bottom: 50px;
+  transition: 500ms font-size ease-out;
+  font-size: calc(41 / 1920 * 140vw);
+}
+
+.main-section3-header-transition {
+  transition: 500ms font-size ease-in;
+  font-size: calc(51 / 1920 * 140vw);
 }
 
 .main-section3-header-hover {

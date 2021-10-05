@@ -2,7 +2,7 @@ var arrowL = document.getElementsByClassName("main-section3-slider-arrows-left")
 var arrowR = document.getElementsByClassName("main-section3-slider-arrows-right")[0];
 
 var maxpiclength = 2000;
-var picwidth = calc(1000 / 1920 * 100vw);
+var picwidth = 1000;
 var piclength = 0;
 var canvas = document.getElementsByClassName("main-section3-slider-canvas")[0];
 var img = document.getElementsByClassName("main-section3-slider-canvas-img")[0];
@@ -18,7 +18,7 @@ function next() {
    else {
       piclength = piclength - picwidth;
    }
-   canvas.style.transform = `translateX(${piclength}px)`;
+   canvas.style.transform = `translateX(calc(${piclength} / 1920 * 100vw))`;
    canvas.style.transition = "transform 800ms ease"
    if (activeball == 1) {
       activeball = 2;
@@ -40,7 +40,7 @@ function previous() {
    else {
       piclength = piclength + picwidth;
    }
-   canvas.style.transform = `translateX(${piclength}px)`;
+   canvas.style.transform = `translateX(calc(${piclength} / 1920 * 100vw))`;
    canvas.style.transition = "transform 800ms ease"
    if (activeball == 3) {
       activeball = 2;
@@ -91,15 +91,24 @@ var header = document.querySelector(".main-section3-header");
 var slider = document.querySelector(".main-section3-slider")
 
 function updateHeader() {
-   if (piclength == 0) {
+   if (activeball == 1) {
+      header.classList.add("main-section3-header-transition");
+      console.log("fak you");
       header.textContent = "Банановые сырники";
+      header.classList.remove("main-section3-header-transition");
+      
    }
-   if (piclength == 1000) {
+   else if (activeball == 2) {
+      header.classList.add("main-section3-header-transition");
       header.textContent = "Манная каша";
+      header.classList.remove("main-section3-header-transition");
+   }
+   else if (activeball == 3) {
+      header.classList.add("main-section3-header-transition");
+      header.textContent = "хрень"
+      header.classList.remove("main-section3-header-transition");
    }
 }
-
-updateHeader()
 
 slider.addEventListener("mouseenter", headerOpen)
 slider.addEventListener("mouseleave", headerClose)
