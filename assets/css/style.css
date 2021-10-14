@@ -619,6 +619,10 @@ h6:hover::after {
   position: absolute;
 }
 
+.leaf2 {
+  width: 200px;
+}
+
 .leaf2-text {
   transform: translate(24px, -132px) rotate(48deg);
   width: 145px;
