@@ -165,7 +165,7 @@ h5:after,
 h6:after {
   content: "";
   background-color: #b99162;
-  height: calc(1.7px / 1920 * 100vw);
+  height: 1.7px;
   display: block;
   position: absolute;
   margin-top: calc(20 / 1920 * 100vw);
@@ -245,10 +245,9 @@ h6:hover::after {
 }
 
 .main-section1-img-wrapper-item {
-  width: calc(554 / 1920 * 100vw);
+  width: calc(854 / 1920 * 100vw);
   margin-left: auto;
   margin-right: auto;
-  width: calc(554 / 1920 * 100vw);
 }
 
 .main-section1-img-wrapper-text {
@@ -256,7 +255,7 @@ h6:hover::after {
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
   width: 100%;
-  transform: translate(0px, calc(91 / 1920 * 100vw));
+  transform: translate(0px, calc(99 / 1920 * 100vw));
   transition: transform 350ms linear;
   bottom: 0;
   font-family: Jura;
@@ -268,7 +267,6 @@ h6:hover::after {
   text-align: center;
   padding-top: calc(19 / 1920 * 100vw);
   padding-bottom: calc(19 / 1920 * 100vw);
-  width: calc(554 / 1920 * 100vw);
 }
 
 .main-section1-description {
@@ -340,7 +338,7 @@ h6:hover::after {
 
 .main-section2-buttons-ua,
 .main-section2-buttons-eng {
-  margin-right: 24px;
+  margin-right: calc(24 / 1920 * 140vw);
 }
 
 .main-section2-buttons-item-button {
@@ -405,10 +403,11 @@ h6:hover::after {
   width: calc(1200 / 1920 * 100vw);
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .main-section3-header {
-  background-color: #00000055;
+  background-color: rgba(0, 0, 0, 0.333);
   color: #fffbdb;
   position: absolute;
   width: calc(1189 / 1920 * 100vw);
@@ -437,20 +436,21 @@ h6:hover::after {
   max-width: calc(1200 / 1920 * 100vw);
 }
 .main-section3-slider-canvas-img {
-  max-width: calc(1200 / 1920 * 100vw);
-}
-
-#left {
-  transform: rotate(180deg);
+  width: calc(1200 / 1920 * 100vw);
+  height: calc(674.4 / 1920 * 100vw);
 }
 
 .main-section3-slider-arrows {
   position: absolute;
   top: 0;
-  margin-top: calc((281 - 60 / 2) / 1920 * 100vw);
+  margin-top: calc((674.4 - 80) / 2 / 1920 * 100vw);
   z-index: 99;
   margin-left: calc(10 / 1920 * 100vw);
+  width: calc(1180 / 1920 * 100vw);
+  height: calc(80 / 1920 * 100vw);
   display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .main-section3-slider-arrows-left,
@@ -460,12 +460,19 @@ h6:hover::after {
   /* transform: translateY(calc(-281px + 60px / 2)); */
 }
 
+.main-section3-slider-arrows-left {
+  transform: rotate(180deg);
+  left: 0;
+}
+
 .main-section3-slider-arrows-right {
-  margin-left: calc(
+  /* margin-left: calc(
     (1200 - (calc(80 / 1920 * 100vw) * 2) - (calc(10 / 1920 * 100vw) * 2)) /
       1920 * 100vw
-  );
-  margin-right: calc(10 / 1920 * 100vw);
+  ); */
+  /* margin-left: calc(1200 - ((80 - 10) / 1920 * 100vw * 2)); */
+  /* margin-right: calc(10 / 1920 * 100vw); */
+  float: right;
 }
 
 .main-section3-slider-balls {
@@ -475,7 +482,7 @@ h6:hover::after {
   justify-content: center;
   margin: 0;
   padding: 0;
-  bottom: 10px;
+  bottom: calc(10 / 1920 * 140vw);
   left: calc(50% - (70px / 2));
 }
 
@@ -588,4 +595,35 @@ h6:hover::after {
   cursor: default;
   font-size: calc(20 / 1920 * 140vw);
   font-family: Neucha;
+}
+
+/* Tree */
+
+.tree {
+  margin-left: 380px;
+  margin-top: 380px;
+}
+
+.tree-img {
+  width: 390px;
+}
+
+.leaf1 {
+  transform: translate(7px, -620px) rotate(32deg);
+  height: 120px;
+  width: 90px;
+}
+
+.leaf2-container {
+  transform: translate(-238px, -808px) rotate(-23deg);
+  position: absolute;
+}
+
+.leaf2-text {
+  transform: translate(24px, -132px) rotate(48deg);
+  width: 145px;
+  margin: 0;
+  font-size: 40px;
+  color: white;
+  font-family: "Neucha";
 }

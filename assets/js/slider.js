@@ -1,15 +1,19 @@
 var arrowL = document.getElementsByClassName("main-section3-slider-arrows-left")[0];
 var arrowR = document.getElementsByClassName("main-section3-slider-arrows-right")[0];
 
-var maxpiclength = 2000;
+arrowR.style.marginLeft = picwidth - arrowL.style.width - arrowR.style.width - arrowL.style.marginleft - arrowR.style.marginright;
+
 var picwidth = 1200;
 var piclength = 0;
 var canvas = document.getElementsByClassName("main-section3-slider-canvas")[0];
-var img = document.getElementsByClassName("main-section3-slider-canvas-img")[0];
-
+var img = document.getElementsByClassName("main-section3-slider-canvas-img");
+var picsCount = img.length;
+var maxpiclength = picwidth * (picsCount - 1);
 
 arrowL.addEventListener("click", previous);
 arrowR.addEventListener("click", next);
+
+// arrowR.style.marginLeft = `${picwidth}px - ${arrowL.style.width - arrowR.style.width - arrowL.style.marginLeft - arrowR.style.marginRight}`;
 
 function next() {
    if (piclength === -maxpiclength) {
