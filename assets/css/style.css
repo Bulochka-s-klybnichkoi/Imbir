@@ -17,6 +17,10 @@ body {
   line-height: calc(27 / 1920 * 100vw);
 }
 
+header.dark {
+  background-color: #000000;
+}
+
 .header::after {
   content: "";
   background-color: #b99162;
@@ -600,8 +604,8 @@ h6:hover::after {
 /* Tree */
 
 .tree {
-  margin-left: 380px;
-  margin-top: 380px;
+  margin-left: 400px;
+  margin-top: 180px;
 }
 
 .tree-img {
@@ -612,6 +616,7 @@ h6:hover::after {
   transform: translate(7px, -620px) rotate(32deg);
   height: 120px;
   width: 90px;
+  position: absolute;
 }
 
 .leaf2-container {

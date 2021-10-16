@@ -92,7 +92,7 @@ var activeball = 1;
 // Header
 
 var header = document.querySelector(".main-section3-header");
-var slider = document.querySelector(".main-section3-slider")
+var slider = document.querySelector(".main-section3-slider");
 
 function updateHeader() {
    if (activeball == 1) {
