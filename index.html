@@ -10,12 +10,16 @@
    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/normalize.css">
    <link rel="stylesheet" href="assets/css/reset.css">
+
+   <link rel="stylesheet" href="assets/css/root.css">
+   <link rel="stylesheet" href="assets/css/styles/header.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/styles/panel.css">
    <title>Имбирь</title>
 </head>
 <body>
    <header class="header main-header">
-      <img src="assets/img/header/logo.png" alt="Logo" class="header-logo">
+      <img src="assets/img/header/logo-light.png" alt="Logo" class="header-logo">
       <nav class="header-nav">
          <img src="assets/img/header/home-home.svg" alt="Home" class="header-nav-home">
          <ul class="header-nav-pages">
@@ -39,16 +43,21 @@
             </li>
          </ul>
       </nav>
-      <img src="assets/img/header/search.svg" alt="Search" class="header-search">
+      <img src="assets/img/header/search-light.svg" alt="Search" class="header-search">
       <input type="text" placeholder="Ищем..." class="header-field">
       <script src="assets/js/search.js"></script>
    </header>
-   <script src="assets/js/dark theme.js"></script>
+   <div class="panel">
+      <div class="panel-theme">
+         <img alt="Toggle Dark/Light theme" class="panel-theme-toggle panel-icon" src="assets/img/panel/загрузка-_1_.svg" />
+         <img alt="Auto Dark/Light theme" class="panel-theme-auto panel-icon" src="assets/img/panel/auto.svg">
+      </div>
+   </div>
    <section class="main-section1">
       <h1 class="main-section1-header">Литературное кафе «Имбирь» с вегетарианской кухней</h1>
       <div class="main-section1-img">
          <div class="main-section1-img-wrapper">
-            <img class="main-section1-img-wrapper-item" src="assets/img/section1/img.jpg" alt="Image">
+            <img class="main-section1-img-wrapper-item" src="assets/img/section1/photo_2021-10-17_19-35-28.jpg" alt="Image">
             <p class="main-section1-img-wrapper-text">Вегетарианская кухня</p>
          </div>
       </div>
@@ -140,5 +149,6 @@
       </div>
    </div>
    <script src="assets/js/tree.js"></script>
+   <script src="assets/js/dark theme.js"></script>
 </body>
 </html>

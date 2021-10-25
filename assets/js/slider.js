@@ -97,7 +97,6 @@ var slider = document.querySelector(".main-section3-slider");
 function updateHeader() {
    if (activeball == 1) {
       header.classList.add("main-section3-header-transition");
-      console.log("fak you");
       header.textContent = "Банановые сырники";
       header.classList.remove("main-section3-header-transition");
       

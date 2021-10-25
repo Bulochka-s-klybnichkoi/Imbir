@@ -1,0 +1,87 @@
+:root {
+  --main: #adfadf;
+  --desktopProportions: 100vw / 1920;
+  --orangeBrownColor: #b99162;
+  --lightBrownColor: #fffbdb;
+  --section1BackgroundColor: #fffbdb99;
+  --lightOrangeBrownColor: #d3af85;
+  /* dark */
+  --brownDarkColor: #382715;
+  --headerBackgroundColor: #69350559;
+  --headerBackgroundColorDark: #382715;
+  --section1BackgroundColorDark: #30211299;
+}
+
+body {
+  background: var(--lightBrownColor);
+  position: relative;
+}
+
+/* Main */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Jura;
+  font-size: calc(30 / 1920 * 140vw);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(60 / 1920 * 100vw);
+  letter-spacing: 0em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+h1.dark,
+h2.dark,
+h3.dark,
+h4.dark,
+h5.dark,
+h6.dark {
+  color: var(--lightOrangeBrownColor);
+}
+
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+h6:after {
+  content: "";
+  background-color: var(--lightBrownColor);
+  height: calc(1.7 / 1920 * 100vw);
+  display: block;
+  position: absolute;
+  margin-top: calc(9 / 1920 * 100vw);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transition: width 500ms, opacity 500ms ease-out;
+  width: 0;
+}
+
+h1:hover::after,
+h2:hover::after,
+h3:hover::after,
+h4:hover::after,
+h5:hover::after,
+h6:hover::after {
+  opacity: 1;
+  width: calc(690 / 1920 * 100vw);
+  transition: width 500ms ease-in;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(1200 / 1920 * 100vw);
+}
