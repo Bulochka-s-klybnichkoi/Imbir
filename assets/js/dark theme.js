@@ -34,14 +34,6 @@ var root = document.documentElement.style;
 
 updateTheme();
 
-if (currentTime.getHours() <= 18 && currentTime.getHours() >= 6) {
-   localStorage.setItem("theme", "light");
-   updateTheme();
-}
-else {
-   localStorage.setItem("theme", "dark");
-   updateTheme();
-}
 
 function updateTheme() {
    if (localStorage.getItem("theme") == "dark") {
@@ -186,7 +178,8 @@ if (localStorage.getItem("themeMode") == null) {
    // change toggle button's color (changing source)
    toggleButton.src = "assets/img/panel/toggle deactivated.svg";
    // create variable "toggleButtonDeactivated" in local storage
-   localStorage.setItem("toggleButtonDeactivated", "true")
+   localStorage.setItem("toggleButtonDeactivated", "true");
+   updateTheme();
 }
 
 // if its auto mode
@@ -194,7 +187,17 @@ if (localStorage.getItem("themeMode") == "auto") {
    // change toggle button's color (changing source)
    toggleButton.src = "assets/img/panel/toggle deactivated.svg";
    // change variable "toggleButtonDeactivated" in local storage
-   localStorage.setItem("toggleButtonDeactivated", "true")
+   localStorage.setItem("toggleButtonDeactivated", "true");
+
+   if (currentTime.getHours() <= 18 && currentTime.getHours() >= 6) {
+      localStorage.setItem("theme", "light");
+      updateTheme();
+   }
+   else {
+      localStorage.setItem("theme", "dark");
+      updateTheme();
+   }
+   updateTheme();
 }
 
 // if its custom mode
