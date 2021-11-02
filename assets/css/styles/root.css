@@ -3,18 +3,33 @@
   --desktopProportions: 100vw / 1920;
   --orangeBrownColor: #b99162;
   --lightBrownColor: #fffbdb;
-  --section1BackgroundColor: #fffbdb99;
-  --lightOrangeBrownColor: #d3af85;
+  --sectionBackgroundColorLight: #fffbdb99;
+  --superLightOrangeBrownColor: #ebd4ba;
+  --lightOrangeBrownColor: #d3b491;
+  --brownOrangeLightColor: #8b6539;
   /* dark */
+  --brownOrangeDarkColor: #72512b;
+  --orangeDarkColor: #a1794e;
   --brownDarkColor: #382715;
-  --headerBackgroundColor: #69350559;
+  --headerBackgroundColor: #CBB591;
   --headerBackgroundColorDark: #382715;
-  --section1BackgroundColorDark: #30211299;
+  --sectionBackgroundColorDark: #30211299;
+  --footerBackgroundColor: #00000093;
+  --panelBackgroundColor: white;
+  --panelBorderColor: #00000000;
+  --panelIconsBackgroundColor: #00000000;
+  --panelIconsBackgroundHoverColor: var(--lightBrownColor);
+  --panelIconsBorderColor: var(--lightBrownColor);
 }
 
 body {
-  background: var(--lightBrownColor);
+  background-color: var(--orangeBrownColor);
   position: relative;
+  padding-top: calc(2 * var(--desktopProportions));
+}
+
+body.dark {
+  background-color: var(--orangeBrownColor);
 }
 
 /* Main */
@@ -43,7 +58,7 @@ h3.dark,
 h4.dark,
 h5.dark,
 h6.dark {
-  color: var(--lightOrangeBrownColor);
+  color: var(--superLightOrangeBrownColor);
 }
 
 h1:after,
@@ -53,7 +68,7 @@ h4:after,
 h5:after,
 h6:after {
   content: "";
-  background-color: var(--lightBrownColor);
+  background-color: var(--brownOrangeDarkColor);
   height: calc(1.7 / 1920 * 100vw);
   display: block;
   position: absolute;
@@ -66,6 +81,15 @@ h6:after {
   opacity: 0;
   transition: width 500ms, opacity 500ms ease-out;
   width: 0;
+}
+
+h1.dark::after,
+h2.dark::after,
+h3.dark::after,
+h4.dark::after,
+h5.dark::after,
+h6.dark::after {
+  background-color: var(--lightBrownColor);
 }
 
 h1:hover::after,

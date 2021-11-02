@@ -1,0 +1,86 @@
+.main-section2 {
+  padding-top: calc(32 / 1920 * 100vw);
+  padding-bottom: calc(42 / 1920 * 100vw);
+  position: relative;
+  background-color: var(--lightBrownColor);
+}
+
+.main-section2.dark {
+  background-color: var(--brownDarkColor);
+}
+
+.main-section2::after {
+  content: "";
+  background-color: var(--orangeBrownColor);
+  height: calc(2 / 1920 * 100vw);
+  width: 100%;
+  bottom: 0;
+  display: block;
+  position: absolute;
+}
+
+.main-section2-header {
+  margin-bottom: calc(23 / 1920 * 100vw);
+}
+
+.main-section2-header::after {
+  background-color: var(--orangeBrownColor);
+  margin-top: calc(4 / 1920 * 100vw);
+}
+
+.main-section2-header.dark::after {
+  background-color: var(--lightOrangeBrownColor);
+}
+
+.main-section2-buttons-row1 {
+  margin-bottom: calc(32 / 1920 * 100vw);
+}
+
+.main-section2-buttons-row1,
+.main-section2-buttons-row2 {
+  display: flex;
+  justify-content: center;
+}
+
+.main-section2-buttons-ua,
+.main-section2-buttons-eng {
+  margin-right: calc(24 / 1920 * 140vw);
+}
+
+.main-section2-buttons-item-button {
+  font-family: Jura;
+  font-size: calc(24 / 1920 * 140vw);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(50 / 1920 * 100vw);
+  letter-spacing: 0em;
+  text-align: center;
+  background-color: var(--orangeBrownColor);
+  color: var(--lightBrownColor);
+  cursor: pointer;
+  transition: color 250ms, padding-left 250ms, padding-right 250ms,
+    font-size 250ms linear;
+  padding-left: calc(15 / 1920 * 100vw);
+  padding-right: calc(15 / 1920 * 100vw);
+  border-radius: 20px;
+}
+
+.main-section2-buttons-item-button.dark {
+  background-color: var(--brownOrangeDarkColor);
+  color: var(--lightOrangeBrownColor);
+}
+
+.main-section2-buttons-item-button:hover {
+  color: #693505;
+  transition: color 500ms, padding 500ms, font-size 500ms ease;
+  padding: calc(15 / 1920 * 100vw) calc(25 / 1920 * 100vw)
+    calc(15 / 1920 * 100vw) calc(25 / 1920 * 100vw);
+  font-size: calc(30 / 1920 * 160vw);
+}
+
+.main-section2-buttons-item-button:hover.dark {
+  color: var(--superLightOrangeBrownColor);
+  background-color: var(--brownOrangeLightColor);
+  border-radius: 35px;
+  transition: color 500ms, padding 500ms, font-size 500ms background-color 500ms border-radius 500ms ease;
+}

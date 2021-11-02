@@ -1,10 +1,9 @@
 .header {
   display: flex;
-  max-height: calc(128 / 1920 * 100vw);
+  height: calc(70 / 1920 * 100vw);
   padding-top: calc(13 * var(--desktopProportions));
   padding-bottom: calc(13 / 1920 * 100vw);
   align-items: center;
-  justify-content: space-evenly;
   position: relative;
   line-height: calc(27 / 1920 * 100vw);
   background-color: var(--headerBackgroundColor);
@@ -25,12 +24,15 @@ header.dark {
 }
 
 .header-logo {
-  width: calc(90 / 1920 * 100vw);
-  height: calc(90 / 1920 * 100vw);
+  width: calc(110 / 1920 * 100vw);
+  height: calc(110 / 1920 * 100vw);
+  position: absolute;
+  left: calc(135 * var(--desktopProportions));
 }
 
 .header-nav {
   align-items: center;
+  margin: auto;
 }
 
 .header-nav-home {
@@ -39,16 +41,16 @@ header.dark {
 
 .header-nav-pages {
   transition: height 250ms, border-color 250ms ease-out;
-  border-left: 1px solid #725b40;
+  border-left: calc(1 * var(--desktopProportions)) solid #725b40;
   padding-left: calc(32 / 1920 * 100vw);
-  height: calc(57 / 1920 * 100vw);
+  height: calc(50 / 1920 * 100vw);
   align-items: center;
 }
 
 .header-nav-pages:hover {
   transition: height 250ms, border-color 250ms ease-in;
   border-color: var(--orangeBrownColor);
-  height: calc(73 / 1920 * 100vw);
+  height: calc(65 / 1920 * 100vw);
 }
 
 .header-nav,
@@ -63,7 +65,7 @@ header.dark {
   font-weight: 400;
   line-height: calc(29 / 1920 * 100vw);
   letter-spacing: 0em;
-  color: var(--orangeBrownColor);
+  color: black;
   transition: color 500ms ease-out;
   cursor: pointer;
   position: relative;
@@ -86,7 +88,7 @@ header.dark {
   content: "";
   background-color: var(--orangeBrownColor);
   width: 100%;
-  height: calc(2 / 1920 * 100vw);
+  height: calc(1.5 / 1920 * 100vw);
   display: block;
   position: absolute;
   margin-top: calc(26 / 1920 * 100vw);
@@ -100,6 +102,11 @@ header.dark {
 
 .header-nav-pages-item:not(:last-child) {
   margin-right: calc(30 / 1920 * 100vw);
+}
+
+.header-search {
+  position: absolute;
+  right: calc(170 * var(--desktopProportions));
 }
 
 .header-search:hover {
@@ -116,13 +123,13 @@ header.dark {
 .header-field {
   position: absolute;
   font-size: calc(22 / 1920 * 140vw);
-  background: #ffffff;
-  border: 1px solid #000000;
+  background: white;
+  border: 1px solid black;
   box-sizing: border-box;
   box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
-  padding: calc(5 / 1920 * 100vw) calc(70 / 1920 * 100vw)
-    calc(15 / 1920 * 100vw) calc(14 / 1920 * 100vw);
+  padding: calc(8 / 1920 * 100vw) calc(70 / 1920 * 100vw)
+    calc(11 / 1920 * 100vw) calc(14 / 1920 * 100vw);
   top: calc(100 / 1920 * 100vw);
   right: calc(40 / 1920 * 100vw);
   z-index: 99;
@@ -132,6 +139,11 @@ header.dark {
   opacity: 0;
   cursor: default;
   transition: opacity 250ms ease;
+}
+
+.header-field.dark {
+  background: var(--lightOrangeBrownColor);
+  border-color: var(--brownOrangeDarkColor);
 }
 
 .header-field-active {

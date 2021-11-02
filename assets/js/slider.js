@@ -64,6 +64,7 @@ function previous() {
 var ball1 = document.getElementsByClassName("main-section3-slider-balls-item")[0];
 var ball2 = document.getElementsByClassName("main-section3-slider-balls-item")[1];
 var ball3 = document.getElementsByClassName("main-section3-slider-balls-item")[2];
+var balls = [...document.getElementsByClassName("main-section3-slider-balls-item")];
 
 function updateBalls() {
    if (activeball == 1) {
@@ -91,25 +92,25 @@ var activeball = 1;
 
 // Header
 
-var header = document.querySelector(".main-section3-header");
+var section3Header = document.querySelector(".main-section3-header");
 var slider = document.querySelector(".main-section3-slider");
 
 function updateHeader() {
    if (activeball == 1) {
-      header.classList.add("main-section3-header-transition");
-      header.textContent = "Банановые сырники";
-      header.classList.remove("main-section3-header-transition");
+      // section3Header.classList.add("main-section3-header-transition");
+      section3Header.textContent = "Банановые сырники";
+      // section3Header.classList.remove("main-section3-header-transition");
       
    }
    else if (activeball == 2) {
-      header.classList.add("main-section3-header-transition");
-      header.textContent = "Манная каша";
-      header.classList.remove("main-section3-header-transition");
+      // section3Header.classList.add("main-section3-header-transition");
+      section3Header.textContent = "Манная каша";
+      // section3Header.classList.remove("main-section3-header-transition");
    }
    else if (activeball == 3) {
-      header.classList.add("main-section3-header-transition");
-      header.textContent = "хрень"
-      header.classList.remove("main-section3-header-transition");
+      // section3Header.classList.add("main-section3-header-transition");
+      section3Header.textContent = "Соба"
+      // section3Header.classList.remove("main-section3-header-transition");
    }
 }
 
@@ -117,9 +118,9 @@ slider.addEventListener("mouseenter", headerOpen)
 slider.addEventListener("mouseleave", headerClose)
 
 function headerOpen() {
-   header.classList.add("main-section3-header-hover")
+   section3Header.classList.add("main-section3-header-hover")
 }
 
 function headerClose() {
-   header.classList.remove("main-section3-header-hover")
+   section3Header.classList.remove("main-section3-header-hover")
 }
