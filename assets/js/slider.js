@@ -1,12 +1,12 @@
-var arrowL = document.getElementsByClassName("main-section3-slider-arrows-left")[0];
-var arrowR = document.getElementsByClassName("main-section3-slider-arrows-right")[0];
+var arrowL = document.getElementsByClassName("main-section8-slider-arrows-left")[0];
+var arrowR = document.getElementsByClassName("main-section8-slider-arrows-right")[0];
 
 arrowR.style.marginLeft = picwidth - arrowL.style.width - arrowR.style.width - arrowL.style.marginleft - arrowR.style.marginright;
 
 var picwidth = 1200;
 var piclength = 0;
-var canvas = document.getElementsByClassName("main-section3-slider-canvas")[0];
-var img = document.getElementsByClassName("main-section3-slider-canvas-img");
+var canvas = document.getElementsByClassName("main-section8-slider-canvas")[0];
+var img = document.getElementsByClassName("main-section8-slider-canvas-img");
 var picsCount = img.length;
 var maxpiclength = picwidth * (picsCount - 1);
 
@@ -61,10 +61,10 @@ function previous() {
 
 // Balls
 
-var ball1 = document.getElementsByClassName("main-section3-slider-balls-item")[0];
-var ball2 = document.getElementsByClassName("main-section3-slider-balls-item")[1];
-var ball3 = document.getElementsByClassName("main-section3-slider-balls-item")[2];
-var balls = [...document.getElementsByClassName("main-section3-slider-balls-item")];
+var ball1 = document.getElementsByClassName("main-section8-slider-balls-item")[0];
+var ball2 = document.getElementsByClassName("main-section8-slider-balls-item")[1];
+var ball3 = document.getElementsByClassName("main-section8-slider-balls-item")[2];
+var balls = [...document.getElementsByClassName("main-section8-slider-balls-item")];
 
 function updateBalls() {
    if (activeball == 1) {
@@ -92,8 +92,8 @@ var activeball = 1;
 
 // Header
 
-var section3Header = document.querySelector(".main-section3-header");
-var slider = document.querySelector(".main-section3-slider");
+var section3Header = document.querySelector(".main-section8-header");
+var slider = document.querySelector(".main-section8-slider");
 
 function updateHeader() {
    if (activeball == 1) {

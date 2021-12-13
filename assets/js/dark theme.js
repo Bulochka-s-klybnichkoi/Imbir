@@ -1,12 +1,9 @@
-var currentTime = new Date("10-10-20:00");
+var currentTime = new Date();
 var body = document.body;
 
-var mainHeader = document.getElementsByClassName("main-header")[0];
+var mainHeader = document.getElementsByTagName("header")[0];
 var headerLogo = document.getElementsByClassName("header-logo")[0];
 var links = [...document.getElementsByClassName("header-nav-pages-item-link")];
-
-var panel = document.getElementsByClassName("panel")[0];
-var panelIcon = document.getElementsByClassName("panel-icon")[0];
 
 var section1 = document.getElementsByClassName("main-section1")[0];
 var section1Header = document.getElementsByClassName("main-section1-header")[0];
@@ -18,11 +15,10 @@ var section2 = document.getElementsByClassName("main-section2")[0];
 var section2Header = document.getElementsByClassName("main-section2-header")[0];
 var section2Buttons = [...document.getElementsByClassName("main-section2-buttons-item-button")];
 
-var section3 = document.getElementsByClassName("main-section3")[0];
-var section3SliderImgs = [...document.getElementsByClassName("main-section3-slider-canvas-img")];
-var section3Slider = document.getElementsByClassName("main-section3-slider")[0];
+var section8 = document.getElementsByClassName("main-section8")[0];
+var section8SliderImgs = [...document.getElementsByClassName("main-section8-slider-canvas-img")];
+var section8Slider = document.getElementsByClassName("main-section8-slider")[0];
 
-var footer = document.getElementsByClassName("footer")[0];
 var footerTitle = document.getElementsByClassName("footer-title-header")[0];
 var footerIcon = document.getElementsByClassName("footer-title-icon")[0];
 var footerLinks = [...document.getElementsByClassName("footer-links-item-link")];
@@ -53,17 +49,17 @@ function updateTheme() {
       searchButton.src = "assets/img/header/search-dark.svg";
       searchInput.classList.add("dark");
       // panel
-      root.setProperty("--panelBackgroundColor", "var(--brownOrangeDarkColor)")
-      root.setProperty("--panelBorderColor", "var(--orangeBrownColor)")
-      root.setProperty("--panelIconsBackgroundColor", "#533b1f")
-      root.setProperty("--panelIconsBackgroundHoverColor", "var(--brownDarkColor)")
+      root.setProperty("--panelBackgroundColor", "var(--brownOrangeDarkColor)");
+      root.setProperty("--panelBorderColor", "var(--orangeBrownColor)");
+      root.setProperty("--panelIconsBackgroundColor", "#533b1f");
+      root.setProperty("--panelIconsBackgroundHoverColor", "var(--brownDarkColor)");
       root.setProperty("--panelIconsBorderColor", "var(--orangeBrownColor)");
       // section 1
       section1.classList.add("dark");
       section1Header.classList.add("dark");
-      section1Image.src = "assets/img/section1/img dark.png"
+      section1Image.src = "assets/img/section1/img dark.png";
       section1ImageHeader.classList.add("dark");
-      section1Descriptions.forEach(setDarkToDescriptions)
+      section1Descriptions.forEach(setDarkToDescriptions);
       function setDarkToDescriptions(description) {
          description.classList.add("dark");
       }
@@ -78,14 +74,14 @@ function updateTheme() {
          button.classList.add("dark");
       }
       // section 3
-      section3.classList.add("dark");
-      section3Slider.classList.add("dark");
+      section8.classList.add("dark");
+      section8Slider.classList.add("dark");
       section3Header.classList.add("dark");
       for (var h = 0; h < 3; h++) {
-         section3SliderImgs[h].src = "assets/img/section3/slider" + h + " dark.jpg";
+         section8SliderImgs[h].src = "assets/img/section8/slider" + h + " dark.jpg";
       }
-      arrowL.src = "assets/img/section3/arrow dark.svg";
-      arrowR.src = "assets/img/section3/arrow dark.svg";
+      arrowL.src = "assets/img/section8/arrow dark.svg";
+      arrowR.src = "assets/img/section8/arrow dark.svg";
       balls.forEach(setDarkToBalls);
       function setDarkToBalls(ball) {
          ball.classList.add("dark");
@@ -119,9 +115,9 @@ function updateTheme() {
       searchInput.classList.remove("dark");
       // panel
       root.setProperty("--panelBackgroundColor", "white");
-      root.setProperty("--panelBorderColor", "#00000000")
+      root.setProperty("--panelBorderColor", "#00000000");
       root.setProperty("--panelIconsBackgroundColor", "#00000000");
-      root.setProperty("--panelIconsBackgroundHoverColor", "var(--lightBrownColor)")
+      root.setProperty("--panelIconsBackgroundHoverColor", "var(--lightBrownColor)");
       root.setProperty("--panelIconsBorderColor", "var(--lightBrownColor)");
       // section 1
       section1.classList.remove("dark");
@@ -143,14 +139,14 @@ function updateTheme() {
          button.classList.remove("dark");
       }
       // section 3
-      section3.classList.remove("dark");
-      section3Slider.classList.remove("dark");
+      section8.classList.remove("dark");
+      section8Slider.classList.remove("dark");
       section3Header.classList.remove("dark");
       for (var h = 0; h < 3; h++) {
-         section3SliderImgs[h].src = "assets/img/section3/slider" + h + ".jpg";
+         section8SliderImgs[h].src = "assets/img/section8/slider" + h + ".jpg";
       }
-      arrowL.src = "assets/img/section3/arrow.svg";
-      arrowR.src = "assets/img/section3/arrow.svg";
+      arrowL.src = "assets/img/section8/arrow.svg";
+      arrowR.src = "assets/img/section8/arrow.svg";
       balls.forEach(setDarkToBalls);
       function setDarkToBalls(ball) {
          ball.classList.remove("dark");
@@ -172,9 +168,9 @@ var toggleButton = document.getElementsByClassName("panel-theme-toggle")[0];
 var autoButton = document.getElementsByClassName("panel-theme-auto")[0];
 
 // check if its first time entering the website
-if (localStorage.getItem("themeMode") == null) {
+if (localStorage.getItem("themeMode") == null || localStorage.getItem("themeMode") == undefined) {
    // the default setup is auto
-   localStorage.setItem("themeMode", "auto");
+   // localStorage.setItem("themeMode", "auto");
    // change toggle button's color (changing source)
    toggleButton.src = "assets/img/panel/toggle deactivated.svg";
    // create variable "toggleButtonDeactivated" in local storage
@@ -184,28 +180,48 @@ if (localStorage.getItem("themeMode") == null) {
 
 // if its auto mode
 if (localStorage.getItem("themeMode") == "auto") {
-   // change toggle button's color (changing source)
-   toggleButton.src = "assets/img/panel/toggle deactivated.svg";
+   if (localStorage.getItem("theme") == "light") {
+      toggleButton.src = "assets/img/panel/toggle deactivated.svg";
+   }
+   else {
+      toggleButton.src = "assets/img/panel/toggle deactivated dark.svg";
+   }
+   autoButton.src = "assets/img/panel/auto.svg";
    // change variable "toggleButtonDeactivated" in local storage
    localStorage.setItem("toggleButtonDeactivated", "true");
 
    if (currentTime.getHours() <= 18 && currentTime.getHours() >= 6) {
       localStorage.setItem("theme", "light");
-      updateTheme();
    }
    else {
       localStorage.setItem("theme", "dark");
-      updateTheme();
    }
    updateTheme();
 }
-
 // if its custom mode
-if (localStorage.getItem("themeMode") == "custom") {
-   // change toggle button's color (changing source)
+else {
+   // make auto button deactivated (checking if it's dark or light theme for it to fit it)
+   if (localStorage.getItem("theme") == "dark") {
+      autoButton.src = "assets/img/panel/auto deactivated dark.svg";
+   }
+   else {
+      autoButton.src = "assets/img/panel/auto deactivated.svg";
+   }
+   // make the toggle button activated
    toggleButton.src = "assets/img/panel/toggle.svg";
    // change variable "toggleButtonDeactivated" in local storage
-   localStorage.setItem("toggleButtonDeactivated", "true")
+   localStorage.setItem("toggleButtonDeactivated", "true");
+   toggleButton.addEventListener("click", changeMode);
+   function changeMode() {
+      if (localStorage.getItem("theme") === "light") {
+         localStorage.setItem("theme", "dark");
+      }
+      else {
+         localStorage.setItem("theme", "light");
+      }
+      updateTheme();
+      // location.reload();
+   }
 }
 
 // add event listener on auto button
@@ -213,14 +229,40 @@ autoButton.addEventListener("click", autoButtonScript);
 
 // script for the auto button
 function autoButtonScript() {
-   if (localStorage.getItem("themeMode") == "auto") {
+   if (localStorage.getItem("themeMode") === "auto") {
       localStorage.setItem("themeMode", "custom");
-   }
-   if (localStorage.getItem("themeMode") == "custom") {
-      localStorage.setItem("themeMode", "auto")
+   } else if (localStorage.getItem("themeMode", "custom")) {
+      localStorage.setItem("themeMode", "auto");
       toggleButton.src = "assets/img/panel/toggle deactivated.svg";
-      
+      alert("ееееееееееееииииииииииииииииииииииии")
    }
-   location.reload();
+   // location.reload();
 }
-// toggleButton.addEventListener("click", "changeTo");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 067 и 240

@@ -17,21 +17,24 @@
    <link rel="stylesheet" href="assets/css/styles/section1.css">
    <link rel="stylesheet" href="assets/css/styles/section2.css">
    <link rel="stylesheet" href="assets/css/styles/section3.css">
+   <link rel="stylesheet" href="assets/css/styles/section8.css">
    <link rel="stylesheet" href="assets/css/styles/footer.css">
    <link rel="stylesheet" href="assets/css/style.css">
    <title>Имбирь</title>
 </head>
 <body>
-   <header class="header main-header">
+   <header>
       <img src="assets/img/header/logo-light.png" alt="Logo" class="header-logo">
       <nav class="header-nav">
-         <img src="assets/img/header/home-home.svg" alt="Home" class="header-nav-home">
+         <a href="#section1">
+            <img src="assets/img/header/home-home.svg" alt="Home" class="header-nav-home">
+         </a>
          <ul class="header-nav-pages">
             <li class="header-nav-pages-item">
-               <a href="#" class="header-nav-pages-item-link">Меню</a>
+               <a href="#section2" class="header-nav-pages-item-link">Меню</a>
             </li>
             <li class="header-nav-pages-item">
-               <a href="#" class="header-nav-pages-item-link">Бизнес-ланчи</a>
+               <a href="#section" class="header-nav-pages-item-link">Бизнес-ланчи</a>
             </li>
             <li class="header-nav-pages-item">
                <a href="#" class="header-nav-pages-item-link">Я тоже смогу!</a>
@@ -57,7 +60,7 @@
          <img alt="Auto Dark/Light theme" class="panel-theme-auto panel-icon" src="assets/img/panel/auto.svg">
       </div>
    </div>
-   <section class="main-section1">
+   <section class="main-section1" id="section1">
       <h1 class="main-section1-header">Литературное кафе «Имбирь» с вегетарианской кухней</h1>
       <div class="main-section1-img">
          <div class="main-section1-img-wrapper">
@@ -71,7 +74,7 @@
          <li class="main-section1-description-item">Искусство питания человека – это то, что мы пытаемся познать каждый день и то, чем хотим поделиться с другими.</li>
       </ul>
    </section>
-   <section class="main-section2">
+   <section class="main-section2" id="section2">
       <h2 class="main-section2-header">Меню</h2>
       <div class="main-section2-buttons">
          <div class="main-section2-buttons-row1">
@@ -92,24 +95,36 @@
          </div>
       </div>
    </section>
-   <section class="main-section3">
+   <section class="section3" id="section3">
+      <h1 class="section3-header">Бизнес-ланч</h1>
+      <p class="section3-time">по буднях з 12:00 до 16:00</p>
+      <p class="section3-date">Сегодня, //-го //////, у нас на бизнес-ланч:</p>
+      <p class="section3-dish dish1">Блюдо 1</p>
+      <p class="section3-dish dish2">Блюдо 2</p>
+      <p class="section3-dish dish3">Блюдо 3</p>
+      <p class="section3-dish dish4">Блюдо 4</p>
+      <b class="section3-extra">Еще чтото</b>
+      <b class="section3-greeting">Вкусно и полезно для продуктивного дня!!!</b>
+      <em class="section3-price">* цена бизнес-ланча - 180 грн.</em>
+   </section>
+   <section class="main-section8">
       <div class="container">
          <div class="wrapper">
-            <h1 class="main-section3-header">Банановые сырники</h1>
-            <div class="main-section3-slider">
-               <div class="main-section3-slider-canvas">
-                     <img class="main-section3-slider-canvas-img" src="assets/img/section3/slider0.jpg" alt="">
-                     <img src="assets/img/section3/slider1.jpg" alt="" class="main-section3-slider-canvas-img">
-                     <img src="assets/img/section3/slider2.jpg" alt="" class="main-section3-slider-canvas-img">
+            <h1 class="main-section8-header">Банановые сырники</h1>
+            <div class="main-section8-slider">
+               <div class="main-section8-slider-canvas">
+                     <img class="main-section8-slider-canvas-img" src="assets/img/section8/slider0.jpg" alt="">
+                     <img src="assets/img/section8/slider1.jpg" alt="" class="main-section8-slider-canvas-img">
+                     <img src="assets/img/section8/slider2.jpg" alt="" class="main-section8-slider-canvas-img">
                </div>
-               <ul class="main-section3-slider-balls">
-                     <li class="main-section3-slider-balls-item"></li>
-                     <li class="main-section3-slider-balls-item"></li>
-                     <li class="main-section3-slider-balls-item"></li>
+               <ul class="main-section8-slider-balls">
+                     <li class="main-section8-slider-balls-item"></li>
+                     <li class="main-section8-slider-balls-item"></li>
+                     <li class="main-section8-slider-balls-item"></li>
                </ul>
-               <div class="main-section3-slider-arrows">
-                  <img src="assets/img/section3/arrow.svg" alt="Arrow" class="main-section3-slider-arrows-left" id="left">
-                  <img src="assets/img/section3/arrow.svg" alt="Arrow" class="main-section3-slider-arrows-right">
+               <div class="main-section8-slider-arrows">
+                  <img src="assets/img/section8/arrow.svg" alt="Arrow" class="main-section8-slider-arrows-left" id="left">
+                  <img src="assets/img/section8/arrow.svg" alt="Arrow" class="main-section8-slider-arrows-right">
                </div>
             </div>
          </div>
@@ -154,6 +169,6 @@
    </div>
    <script src="assets/js/tree.js"></script>
    <script src="assets/js/dark theme.js"></script>
-   <!-- <script src="assets/js/dark theme.js"></script> -->
+   <script src="assets/js/dark theme.js"></script>
 </body>
 </html>

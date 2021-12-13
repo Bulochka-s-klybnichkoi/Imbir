@@ -11,7 +11,7 @@
 
 .main-section2::after {
   content: "";
-  background-color: var(--orangeBrownColor);
+  background-color: var(--brownOrangeLightColor);
   height: calc(2 / 1920 * 100vw);
   width: 100%;
   bottom: 0;
@@ -82,5 +82,6 @@
   color: var(--superLightOrangeBrownColor);
   background-color: var(--brownOrangeLightColor);
   border-radius: 35px;
-  transition: color 500ms, padding 500ms, font-size 500ms background-color 500ms border-radius 500ms ease;
+  transition: color 500ms, padding 500ms,
+    font-size 500ms background-color 500ms border-radius 500ms ease;
 }
