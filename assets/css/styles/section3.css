@@ -5,11 +5,16 @@
   position: relative;
   padding-top: 10px;
   padding-bottom: 30px;
+  background-color: var(--lightBrownColorDarker);
+}
+
+.section3.dark {
+  background-color: var(--brownOrangeDarkDarkColor);
 }
 
 .section3::after {
   content: "";
-  background-color: var(--brownDarkColor);
+  background-color: var(--brownOrangeLightColor);
   height: calc(2 / 1920 * 100vw);
   width: 100%;
   bottom: 0;
@@ -18,12 +23,17 @@
 }
 
 .section3-header {
-  color: var(--brownDarkColor);
   margin-bottom: 20px;
+  color: var(--brownOrangeDarkColor);
+}
+
+.section3-header.dark {
+  color: var(--lightOrangeBrownColor);
 }
 
 .section3-header:hover::after {
   width: calc(275 / 1920 * 100vw);
+  background-color: var(--orangeBrownColor);
 }
 
 .section3-time,
@@ -36,6 +46,16 @@
   font-size: calc(35 * var(--desktopProportions));
   margin: 0;
   color: var(--brownOrangeDarkColor);
+  border-radius: 30px;
+}
+
+.section3-time.dark,
+.section3-date.dark,
+.section3-dish.dark,
+.section3-extra.dark,
+.section3-price.dark,
+.section3-greeting.dark {
+  color: var(--orangeBrownColor);
 }
 
 .section3-time {

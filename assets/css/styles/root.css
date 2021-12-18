@@ -3,12 +3,14 @@
   --desktopProportions: 100vw / 1920;
   --orangeBrownColor: #b99162;
   --lightBrownColor: #fffbdb;
+  --lightBrownColorDarker: #ecd6b3;
   --sectionBackgroundColorLight: #fffbdb99;
   --superLightOrangeBrownColor: #ebd4ba;
   --lightOrangeBrownColor: #d3b491;
   --brownOrangeLightColor: #8b6539;
   /* dark */
   --brownOrangeDarkColor: #72512b;
+  --brownOrangeDarkDarkColor: #5e3e1b;
   --orangeDarkColor: #a1794e;
   --brownDarkColor: #382715;
   --headerBackgroundColor: #cbb591;

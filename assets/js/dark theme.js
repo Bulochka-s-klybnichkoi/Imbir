@@ -15,6 +15,9 @@ var section2 = document.getElementsByClassName("main-section2")[0];
 var section2Header = document.getElementsByClassName("main-section2-header")[0];
 var section2Buttons = [...document.getElementsByClassName("main-section2-buttons-item-button")];
 
+var section3 = document.getElementsByClassName("section3")[0];
+var section3Texts = [...section3.children];
+
 var section8 = document.getElementsByClassName("main-section8")[0];
 var section8SliderImgs = [...document.getElementsByClassName("main-section8-slider-canvas-img")];
 var section8Slider = document.getElementsByClassName("main-section8-slider")[0];
@@ -74,6 +77,12 @@ function updateTheme() {
          button.classList.add("dark");
       }
       // section 3
+      section3.classList.add("dark");
+      section3Texts.forEach(setDarkToSection3Texts);
+      function setDarkToSection3Texts (text) {
+         text.classList.add("dark");
+      }
+      // section 8
       section8.classList.add("dark");
       section8Slider.classList.add("dark");
       section3Header.classList.add("dark");
@@ -139,6 +148,12 @@ function updateTheme() {
          button.classList.remove("dark");
       }
       // section 3
+      section3.classList.remove("dark");
+      section3Texts.forEach(setDarkToSection3Texts);
+      function setDarkToSection3Texts (text) {
+         text.classList.remove("dark");
+      }
+      // section 8
       section8.classList.remove("dark");
       section8Slider.classList.remove("dark");
       section3Header.classList.remove("dark");
