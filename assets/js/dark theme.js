@@ -16,7 +16,8 @@ var section2Header = document.getElementsByClassName("main-section2-header")[0];
 var section2Buttons = [...document.getElementsByClassName("main-section2-buttons-item-button")];
 
 var section3 = document.getElementsByClassName("section3")[0];
-var section3Texts = [...section3.children];
+var section3Container = document.getElementsByClassName("section3-container")[0];
+var section3Texts = [...section3Container.children];
 
 var section8 = document.getElementsByClassName("main-section8")[0];
 var section8SliderImgs = [...document.getElementsByClassName("main-section8-slider-canvas-img")];
@@ -84,8 +85,8 @@ function updateTheme() {
       }
       // section 8
       section8.classList.add("dark");
+      section8Header.classList.add("dark");
       section8Slider.classList.add("dark");
-      section3Header.classList.add("dark");
       for (var h = 0; h < 3; h++) {
          section8SliderImgs[h].src = "assets/img/section8/slider" + h + " dark.jpg";
       }
@@ -155,8 +156,8 @@ function updateTheme() {
       }
       // section 8
       section8.classList.remove("dark");
+      section8Header.classList.remove("dark");
       section8Slider.classList.remove("dark");
-      section3Header.classList.remove("dark");
       for (var h = 0; h < 3; h++) {
          section8SliderImgs[h].src = "assets/img/section8/slider" + h + ".jpg";
       }
@@ -190,6 +191,7 @@ if (localStorage.getItem("themeMode") == null || localStorage.getItem("themeMode
    toggleButton.src = "assets/img/panel/toggle deactivated.svg";
    // create variable "toggleButtonDeactivated" in local storage
    localStorage.setItem("toggleButtonDeactivated", "true");
+   localStorage.setItem("themeMode", "auto");
    updateTheme();
 }
 
@@ -228,13 +230,15 @@ else {
    localStorage.setItem("toggleButtonDeactivated", "true");
    toggleButton.addEventListener("click", changeMode);
    function changeMode() {
-      if (localStorage.getItem("theme") === "light") {
-         localStorage.setItem("theme", "dark");
+      if (localStorage.getItem("themeMode") !== "auto") {
+         if (localStorage.getItem("theme") === "light") {
+            localStorage.setItem("theme", "dark");
+         }
+         else {
+            localStorage.setItem("theme", "light");
+         }
+         updateTheme();
       }
-      else {
-         localStorage.setItem("theme", "light");
-      }
-      updateTheme();
       // location.reload();
    }
 }
@@ -246,11 +250,45 @@ autoButton.addEventListener("click", autoButtonScript);
 function autoButtonScript() {
    if (localStorage.getItem("themeMode") === "auto") {
       localStorage.setItem("themeMode", "custom");
+      localStorage.setItem("toggleButtonDeactivated", false)
+      toggleButton.src = "assets/img/panel/toggle.svg";
+      if (localStorage.getItem("theme") == "dark") {
+         autoButton.src = "assets/img/panel/auto deactivated dark.svg";
+      }
+      else {
+         autoButton.src = "assets/img/panel/auto deactivated.svg";
+      }
+      toggleButton.addEventListener("click", changeMode);
+      function changeMode() {
+         if (localStorage.getItem("theme") === "light") {
+            localStorage.setItem("theme", "dark");
+         }
+         else {
+            localStorage.setItem("theme", "light");
+         }
+         updateTheme();
+         // location.reload();
+      }
    } else if (localStorage.getItem("themeMode", "custom")) {
       localStorage.setItem("themeMode", "auto");
-      toggleButton.src = "assets/img/panel/toggle deactivated.svg";
-      alert("ееееееееееееииииииииииииииииииииииии")
-   }
+      if (localStorage.getItem("theme") == "light") {
+         toggleButton.src = "assets/img/panel/toggle.svg";
+      }
+      else {
+         toggleButton.src = "assets/img/panel/toggle deactivated dark.svg";
+      }
+      autoButton.src = "assets/img/panel/auto.svg";
+      autoButton.addEventListener("click", autoButtonScript);
+      // change variable "toggleButtonDeactivated" in local storage
+      localStorage.setItem("toggleButtonDeactivated", true);
+      if (currentTime.getHours() <= 18 && currentTime.getHours() >= 6) {
+         localStorage.setItem("theme", "light");
+      }
+      else {
+         localStorage.setItem("theme", "dark");
+      }
+      updateTheme();
+      }
    // location.reload();
 }
 

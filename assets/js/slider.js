@@ -92,24 +92,24 @@ var activeball = 1;
 
 // Header
 
-var section3Header = document.querySelector(".main-section8-header");
+var section8Header = document.querySelector(".main-section8-header");
 var slider = document.querySelector(".main-section8-slider");
 
 function updateHeader() {
    if (activeball == 1) {
       // section3Header.classList.add("main-section3-header-transition");
-      section3Header.textContent = "Банановые сырники";
+      section8Header.textContent = "Банановые сырники";
       // section3Header.classList.remove("main-section3-header-transition");
       
    }
    else if (activeball == 2) {
       // section3Header.classList.add("main-section3-header-transition");
-      section3Header.textContent = "Манная каша";
+      section8Header.textContent = "Манная каша";
       // section3Header.classList.remove("main-section3-header-transition");
    }
    else if (activeball == 3) {
       // section3Header.classList.add("main-section3-header-transition");
-      section3Header.textContent = "Соба"
+      section8Header.textContent = "Соба"
       // section3Header.classList.remove("main-section3-header-transition");
    }
 }
@@ -118,9 +118,9 @@ slider.addEventListener("mouseenter", headerOpen)
 slider.addEventListener("mouseleave", headerClose)
 
 function headerOpen() {
-   section3Header.classList.add("main-section3-header-hover")
+   section8Header.classList.add("main-section3-header-hover")
 }
 
 function headerClose() {
-   section3Header.classList.remove("main-section3-header-hover")
+   section8Header.classList.remove("main-section3-header-hover")
 }
