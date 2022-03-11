@@ -1,6 +1,6 @@
 .main-section2 {
-  padding-top: calc(32 / 1920 * 100vw);
-  padding-bottom: calc(42 / 1920 * 100vw);
+  padding-top: calc(32 * var(--desktopProportions));
+  padding-bottom: calc(42 * var(--desktopProportions));
   position: relative;
   background-color: var(--lightBrownColor);
 }
@@ -9,23 +9,13 @@
   background-color: var(--brownDarkColor);
 }
 
-.main-section2::after {
-  content: "";
-  background-color: var(--brownOrangeLightColor);
-  height: calc(2 / 1920 * 100vw);
-  width: 100%;
-  bottom: 0;
-  display: block;
-  position: absolute;
-}
-
 .main-section2-header {
-  margin-bottom: calc(23 / 1920 * 100vw);
+  margin-bottom: calc(23 * var(--desktopProportions));
 }
 
 .main-section2-header::after {
   background-color: var(--orangeBrownColor);
-  margin-top: calc(4 / 1920 * 100vw);
+  margin-top: calc(4 * var(--desktopProportions));
 }
 
 .main-section2-header.dark::after {
@@ -33,7 +23,7 @@
 }
 
 .main-section2-buttons-row1 {
-  margin-bottom: calc(32 / 1920 * 100vw);
+  margin-bottom: calc(32 * var(--desktopProportions));
 }
 
 .main-section2-buttons-row1,
@@ -44,24 +34,24 @@
 
 .main-section2-buttons-ua,
 .main-section2-buttons-eng {
-  margin-right: calc(24 / 1920 * 140vw);
+  margin-right: calc(24 * var(--desktopProportions));
 }
 
 .main-section2-buttons-item-button {
   font-family: Jura;
-  font-size: calc(24 / 1920 * 140vw);
+  font-size: calc(30 * var(--desktopProportions));
   font-style: normal;
   font-weight: 400;
-  line-height: calc(50 / 1920 * 100vw);
+  line-height: calc(50 * var(--desktopProportions));
   letter-spacing: 0em;
   text-align: center;
   background-color: var(--orangeBrownColor);
   color: var(--lightBrownColor);
   cursor: pointer;
   transition: color 250ms, padding-left 250ms, padding-right 250ms,
-    font-size 250ms linear;
-  padding-left: calc(15 / 1920 * 100vw);
-  padding-right: calc(15 / 1920 * 100vw);
+    font-size 250ms ease;
+  padding-left: calc(15 * var(--desktopProportions));
+  padding-right: calc(15 * var(--desktopProportions));
   border-radius: 20px;
 }
 
@@ -73,9 +63,9 @@
 .main-section2-buttons-item-button:hover {
   color: #693505;
   transition: color 500ms, padding 500ms, font-size 500ms ease;
-  padding: calc(15 / 1920 * 100vw) calc(25 / 1920 * 100vw)
-    calc(15 / 1920 * 100vw) calc(25 / 1920 * 100vw);
-  font-size: calc(30 / 1920 * 160vw);
+  padding: calc(15 * var(--desktopProportions)) calc(25 * var(--desktopProportions))
+    calc(15 * var(--desktopProportions)) calc(25 * var(--desktopProportions));
+  font-size: calc(40 * var(--desktopProportions));
 }
 
 .main-section2-buttons-item-button:hover.dark {

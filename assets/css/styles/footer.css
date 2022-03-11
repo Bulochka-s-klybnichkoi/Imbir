@@ -4,24 +4,24 @@
   background-blend-mode: darken;
   background-position: center;
   background-size: cover;
-  padding-top: calc(20 / 1920 * 100vw);
-  padding-bottom: calc(30 / 1920 * 100vw);
+  padding-top: calc(20 * var(--desktopProportions));
+  padding-bottom: calc(30 * var(--desktopProportions));
 }
 
 .footer-title {
   display: flex;
   position: relative;
   align-items: center;
-  margin-bottom: calc(30 / 1920 * 100vw);
+  margin-bottom: calc(30 * var(--desktopProportions));
 }
 
 .footer-title::after {
   content: "";
   background-color: var(--orangeBrownColor);
-  height: calc(1.7 / 1920 * 100vw);
+  height: calc(1.7 * var(--desktopProportions));
   display: block;
   position: absolute;
-  bottom: calc(-15 / 1920 * 100vw);
+  bottom: calc(-15 * var(--desktopProportions));
   opacity: 0;
   transition: width 500ms, opacity 500ms ease-out;
   width: 0;
@@ -37,7 +37,7 @@
   color: white;
   margin-left: 0;
   margin-right: 0;
-  font-size: calc(41 / 1920 * 140vw);
+  font-size: calc(41 * var(--desktopProportions));
   transition: 500ms color ease;
 }
 
@@ -51,9 +51,9 @@
 }
 
 .footer-title-icon {
-  width: calc(55 / 1920 * 100vw);
-  height: calc(55 / 1920 * 100vw);
-  margin-right: calc(10 / 1920 * 100vw);
+  width: calc(55 * var(--desktopProportions));
+  height: calc(55 * var(--desktopProportions));
+  margin-right: calc(10 * var(--desktopProportions));
 }
 
 .footer-links {
@@ -62,17 +62,17 @@
 }
 
 .footer-links-row1 {
-  margin-right: calc(50 / 1920 * 100vw);
+  margin-right: calc(50 * var(--desktopProportions));
 }
 
 .footer-links-item:not(:last-child) {
-  margin-bottom: calc(10 / 1920 * 140vw);
+  margin-bottom: calc(10 * var(--desktopProportions));
 }
 
 .footer-links-item-link {
   color: white;
   font-family: Neucha;
-  font-size: calc(20 / 1920 * 140vw);
+  font-size: calc(20 * var(--desktopProportions));
   transition: color 250ms ease;
 }
 
@@ -97,9 +97,9 @@
 .comma {
   color: white;
   margin: 0;
-  margin-right: calc(8 / 1920 * 100vw);
+  margin-right: calc(8 * var(--desktopProportions));
   cursor: default;
-  font-size: calc(20 / 1920 * 140vw);
+  font-size: calc(20 * var(--desktopProportions));
   font-family: Neucha;
 }
 

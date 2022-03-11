@@ -23,7 +23,7 @@ function next() {
       piclength = piclength - picwidth;
    }
    canvas.style.transform = `translateX(calc(${piclength} / 1920 * 100vw))`;
-   canvas.style.transition = "transform 800ms ease"
+   canvas.style.transition = "transform 800ms ease";
    if (activeball == 1) {
       activeball = 2;
    }
@@ -33,8 +33,8 @@ function next() {
    else if (activeball == 3) {
       activeball = 1;
    }
-   updateBalls()
-   updateHeader()
+   updateBalls();
+   updateHeader();
 }
 
 function previous() {
@@ -45,7 +45,7 @@ function previous() {
       piclength = piclength + picwidth;
    }
    canvas.style.transform = `translateX(calc(${piclength} / 1920 * 100vw))`;
-   canvas.style.transition = "transform 800ms ease"
+   canvas.style.transition = "transform 800ms ease";
    if (activeball == 3) {
       activeball = 2;
    }
@@ -55,8 +55,8 @@ function previous() {
    else if (activeball == 1) {
       activeball = 3;
    }
-   updateBalls()
-   updateHeader()
+   updateBalls();
+   updateHeader();
 }
 
 // Balls
@@ -68,15 +68,15 @@ var balls = [...document.getElementsByClassName("main-section8-slider-balls-item
 
 function updateBalls() {
    if (activeball == 1) {
-      passiveBalls()
+      passiveBalls();
       ball1.classList.add("active-ball")
    }
    else if (activeball == 2) {
-      passiveBalls()
+      passiveBalls();
       ball2.classList.add("active-ball")
    }
    else if (activeball == 3) {
-      passiveBalls()
+      passiveBalls();
       ball3.classList.add("active-ball")
    }
 }
@@ -109,18 +109,18 @@ function updateHeader() {
    }
    else if (activeball == 3) {
       // section3Header.classList.add("main-section3-header-transition");
-      section8Header.textContent = "Соба"
+      section8Header.textContent = "Соба";
       // section3Header.classList.remove("main-section3-header-transition");
    }
 }
 
-slider.addEventListener("mouseenter", headerOpen)
-slider.addEventListener("mouseleave", headerClose)
+slider.addEventListener("mouseenter", headerOpen);
+slider.addEventListener("mouseleave", headerClose);
 
 function headerOpen() {
-   section8Header.classList.add("main-section3-header-hover")
+   section8Header.classList.add("main-section8-header-hover");
 }
 
 function headerClose() {
-   section8Header.classList.remove("main-section3-header-hover")
+   section8Header.classList.remove("main-section8-header-hover");
 }

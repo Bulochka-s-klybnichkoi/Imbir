@@ -1,11 +1,12 @@
 .main-section1 {
-  padding-top: calc(32 / 1920 * 100vw);
-  padding-bottom: calc(42 / 1920 * 100vw);
+  margin-top: calc(102 * var(--desktopProportions));
+  padding-top: calc(32 * var(--desktopProportions));
+  padding-bottom: calc(42 * var(--desktopProportions));
   background-image: url(/assets/img/section1/background.jpg);
   background-color: var(--sectionBackgroundColorLight);
   background-blend-mode: lighten;
   background-position: top;
-  background-size: calc(1820 / 1920 * 150vw);
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -15,31 +16,29 @@
   background-blend-mode: darken;
 }
 
-.main-section1::after {
-  content: "";
-  background-color: var(--orangeBrownColor);
-  height: calc(2 / 1920 * 100vw);
-  width: 100%;
-  bottom: 0;
-  display: block;
-  position: absolute;
+.main-section1.logo-anim {
+  margin-top: calc(118 * var(--desktopProportions));
 }
 
 .main-section1-header {
-  max-width: calc(800 / 1920 * 100vw);
-  margin-bottom: calc(25 / 1920 * 100vw);
+  max-width: calc(800 * var(--desktopProportions));
+  margin-bottom: calc(25 * var(--desktopProportions));
 }
 
 .main-section1-header.dark {
   color: var(--lightOrangeBrownColor);
 }
 
+.main-section1-header:hover::after {
+  width: calc(630 * var(--desktopProportions));
+}
+
 .main-section1-header.dark:hover::after {
-  width: calc(630 / 1920 * 100vw);
+  background-color: var(--superLightOrangeBrownColor);
 }
 
 .main-section1-img {
-  margin-bottom: calc(43 / 1920 * 100vw);
+  margin-bottom: calc(43 * var(--desktopProportions));
   display: flex;
   justify-content: center;
 }
@@ -52,12 +51,12 @@
 }
 
 .main-section1-img-wrapper:hover .main-section1-img-wrapper-text {
-  transform: translateY(calc(60 / 1920 * 100vw));
+  transform: translateY(calc(32 * var(--desktopProportions)));
   transition: transform 350ms;
 }
 
 .main-section1-img-wrapper-item {
-  width: calc(754 / 1920 * 100vw);
+  width: calc(754 * var(--desktopProportions));
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,18 +66,18 @@
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
   width: 100%;
-  transform: translateY(calc(131 / 1920 * 100vw));
-  transition: transform 350ms linear;
+  transform: translateY(calc(98 * var(--desktopProportions)));
+  transition: transform 350ms ease;
   bottom: 0;
   font-family: Jura;
-  font-size: calc(22 / 1920 * 140vw);
+  font-size: calc(30 * var(--desktopProportions));
   font-style: normal;
   font-weight: 400;
-  line-height: calc(29 / 1920 * 100vw);
+  line-height: calc(29 * var(--desktopProportions));
   letter-spacing: 0em;
   text-align: center;
-  padding-top: calc(19 / 1920 * 100vw);
-  padding-bottom: calc(50 / 1920 * 100vw);
+  padding-top: calc(19 * var(--desktopProportions));
+  padding-bottom: calc(50 * var(--desktopProportions));
 }
 
 .main-section1-img-wrapper-text.dark {
@@ -86,7 +85,7 @@
 }
 
 .main-section1-description {
-  max-width: calc(980 / 1920 * 100vw);
+  max-width: calc(980 * var(--desktopProportions));
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -94,14 +93,14 @@
 
 .main-section1-description-item {
   font-family: Neucha;
-  font-size: calc(23 / 1920 * 140vw);
+  font-size: calc(30 * var(--desktopProportions));
   font-style: normal;
   font-weight: 400;
-  line-height: calc(40 / 1920 * 100vw);
+  line-height: calc(40 * var(--desktopProportions));
   letter-spacing: 0em;
   list-style: disc;
   cursor: default;
-  transition: font-size 300ms linear;
+  transition: font-size 300ms ease;
   text-align: center;
   margin: 0;
 }
@@ -112,8 +111,8 @@
 
 .main-section1-description-item:hover {
   color: #725b40;
-  font-size: calc(23 / 1920 * 150vw);
-  transition: font-size 700ms, color 500ms linear;
+  font-size: calc(35 * var(--desktopProportions));
+  transition: font-size 700ms, color 500ms ease;
 }
 
 .main-section1-description-item.dark:hover {
@@ -121,7 +120,7 @@
 }
 
 .main-section1-description-item:not(:last-child) {
-  margin-bottom: calc(20 / 1920 * 100vw);
+  margin-bottom: calc(20 * var(--desktopProportions));
 }
 
 .main-section1-description-item::marker {

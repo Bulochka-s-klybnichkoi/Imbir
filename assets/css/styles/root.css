@@ -1,3 +1,8 @@
+* {
+  transition: 500ms ease;
+  font-family: Jura;
+}
+
 :root {
   --main: #adfadf;
   --desktopProportions: 100vw / 1920;
@@ -30,10 +35,6 @@ body {
   padding-top: calc(2 * var(--desktopProportions));
 }
 
-body.dark {
-  background-color: var(--orangeBrownColor);
-}
-
 /* Main */
 
 h1,
@@ -43,10 +44,10 @@ h4,
 h5,
 h6 {
   font-family: Jura;
-  font-size: calc(30 / 1920 * 140vw);
+  font-size: calc(41 * var(--desktopProportions));
   font-style: normal;
   font-weight: 400;
-  line-height: calc(60 / 1920 * 100vw);
+  line-height: calc(60 * var(--desktopProportions));
   letter-spacing: 0em;
   text-align: center;
   margin-left: auto;
@@ -71,10 +72,10 @@ h5:after,
 h6:after {
   content: "";
   background-color: var(--brownOrangeDarkColor);
-  height: calc(1.7 / 1920 * 100vw);
+  height: calc(1.7 * var(--desktopProportions));
   display: block;
   position: absolute;
-  margin-top: calc(9 / 1920 * 100vw);
+  margin-top: calc(9 * var(--desktopProportions));
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -101,7 +102,7 @@ h4:hover::after,
 h5:hover::after,
 h6:hover::after {
   opacity: 1;
-  width: calc(690 / 1920 * 100vw);
+  width: calc(690 * var(--desktopProportions));
   transition: width 500ms ease-in;
 }
 
@@ -109,5 +110,11 @@ h6:hover::after {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: calc(1200 / 1920 * 100vw);
+  max-width: calc(1200 * var(--desktopProportions));
+}
+
+.after-section-line {
+  background-color: var(--orangeBrownColor);
+  height: calc(2 * var(--desktopProportions));
+  width: 100%;
 }
